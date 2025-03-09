@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Category</title>
+</head>
+<body>
+
+<h1 align="center">Add Category</h1>
+
+{% if error_message %}
+    <div align="center">
+        {{ error_message }}
+    </div>
+{% endif %}
+
+<center>
+    <form action="{% url 'admin_insert_category' %}" method="POST">
+        {% csrf_token %}
+
+        <table border="1" cellpadding="10">
+            <tr>
+                <td><label for="categoryName">Category Name:</label></td>
+                <td><input type="text" id="categoryName" name="categoryName" required></td>
+            </tr>
+            <tr>
+                <td><label for="categoryDescription">Category Description:</label></td>
+                <td><textarea id="categoryDescription" name="categoryDescription" required></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><button type="submit">Add</button></td>
+            </tr>
+        </table>
+    </form>
+</center>
+
+</body>
+</html>

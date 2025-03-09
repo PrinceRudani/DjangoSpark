@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .button-group {
+            margin: 10px 0;
+        }
+        button {
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome Admin!</h1>
+
+    <div class="button-group">
+        <a href="/load_register">
+            <button class="register-btn">Register</button>
+        </a>
+        <a href="/logout">
+            <button class="logout-btn">Logout</button>
+        </a>
+    </div>
+
+    <div class="button-group">
+        <a href="/admin_load_category">
+            <button type="button">Add Category</button>
+        </a>
+        <a href="/admin_view_category">
+            <button type="button">View Categories</button>
+        </a>
+    </div>
+
+    <div class="button-group">
+        <a href="/load_sub_category">
+            <button type="button">Add Subcategory</button>
+        </a>
+        <a href="/view_sub_category">
+            <button type="button">View Subcategories</button>
+        </a>
+    </div>
+
+    <div class="button-group">
+        <a href="/load_product">
+            <button type="button">Add Product</button>
+        </a>
+        <a href="/view_product">
+            <button type="button">View Products</button>
+        </a>
+    </div>
+</body>
+</html>

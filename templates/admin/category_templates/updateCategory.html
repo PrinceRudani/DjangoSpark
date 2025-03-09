@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Category</title>
+</head>
+<body>
+
+<h1 align="center">Update Category</h1>
+
+{% if error_message %}
+    <div align="center">
+        {{ error_message }}
+    </div>
+{% endif %}
+
+<center>
+    <form action="{% url 'admin_update_category' %}" method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="category_id" value="{{ category.category_id }}">
+
+        <table border="1" cellpadding="10">
+            <tr>
+                <td><label for="categoryName">Category Name:</label></td>
+                <td><input type="text" id="categoryName" name="categoryName" value="{% if category %}{{ category.category_name }}{% endif %}" required></td>
+            </tr>
+            <tr>
+                <td><label for="categoryDescription">Category Description:</label></td>
+                <td><textarea id="categoryDescription" name="categoryDescription" required>{% if category %}{{ category.category_description }}{% endif %}</textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><button type="submit">Update</button></td>
+            </tr>
+        </table>
+    </form>
+</center>
+
+</body>
+</html>
