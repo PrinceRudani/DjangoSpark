@@ -10,13 +10,13 @@
 <h1 align="center">Subcategory List</h1>
 
 {% if error_message %}
-<div align="center">
+<div class="error-message">
     {{ error_message }}
 </div>
 {% endif %}
 
 <center>
-    <table border="1" cellpadding="10" cellspacing="0">
+    <table border="1" cellspacing="0" cellpadding="10">
         <tr>
             <th>Category Name</th>
             <th>Subcategory Name</th>
@@ -24,43 +24,42 @@
             <th>Actions</th>
         </tr>
 
-        {% for category in sub_category_vo %}
+        {% for category in subcategory_vo %}
         <tr>
-            <td>{{ category.subcategory_category_id }}</td>
+            <td>{{ category.subcategory_category_vo.category_name }}</td>
             <td>{{ category.subcategory_name }}</td>
             <td>{{ category.subcategory_description }}</td>
             <td>
-                <form method="POST" action="/admin_delete_subcategory/">
-                    {% csrf_token %}
-                    <input type="hidden" name="subcategory_id"
-                           value="{{ category.subcategory_id }}">
-                    <button type="submit">Delete</button>
-                </form>
-
-                <form
-                        action="/admin_edit_subcategory/{{ category.subcategory_id }}"
-                      method="GET" style="display: inline;">
-                    <button type="submit">Update</button>
-                </form>
+                <div style="display: inline-block; margin-right: 10px;">
+                    <form method="POST" action="/admin_delete_subcategory/">
+                        {% csrf_token %}
+                        <input type="hidden" name="subcategory_id"
+                               value="{{ category.subcategory_id }}">
+                        <button type="submit">Delete</button>
+                    </form>
+                </div>
+                <div style="display: inline-block;">
+                    <form action="{% url 'admin_edit_subcategory' %}" method="GET">
+                        {% csrf_token %}
+                        <input type="hidden" name="subcategory_id"
+                               value="{{ category.subcategory_id }}">
+                        <button type="submit">Edit</button>
+                    </form>
+                </div>
             </td>
         </tr>
-
         {% endfor %}
-
     </table>
-
-    <br>
-
-    <table>
-        <tr>
-            <td><a href="/load_sub_category">
-                <button type="button">Add New Subcategory</button>
-            </a></td>
-            <td><a href="admin/home">
-                <button type="button">Home Page</button>
-            </a></td>
-        </tr>
-    </table>
+<br><br>
+    <div class="form-buttons">
+        <a href="/admin_load_subcategory">
+            <button type="button">Add New Subcategory</button>
+        </a>
+        <a href="/">
+            <button type="button">Home Page</button>
+        </a>
+    </div>
 </center>
+
 </body>
 </html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product</title>
+    {% load static %}
+    <style>
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+        img {
+            width: 80px; /* Smaller preview */
+            height: auto;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+        .form-container {
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script type="text/javascript">
+        var selectedSubcategoryId = {{ product.product_subcategory_id.subcategory_id }};
+    </script>
+
+    <script>
+function loadState() {
+    var product_category_id = document.getElementById("product_category_id");
+    var product_subcategory_id = document.getElementById("product_subcategory_id");
+    product_subcategory_id.innerHTML = "";  // Clear previous subcategories
+
+    if (product_category_id.value === "") {
+        return;  // Do nothing if no category is selected
+    }
+
+    var ajax = new XMLHttpRequest();
+    ajax.onreadystatechange = function () {
+        if (ajax.readyState === 4 && ajax.status === 200) {
+            var jsn = JSON.parse(ajax.responseText);
+            console.log("AJAX response:", jsn);  // Log response for debugging
+
+            // Check if response is empty
+            if (jsn.length === 0) {
+                console.log("No subcategories found.");
+                return;  // Handle empty subcategories
+            }
+
+            // Populate subcategory dropdown
+            jsn.forEach(function (subcategory) {
+                var opt = document.createElement("option");
+                opt.value = subcategory.subcategory_id;
+                opt.text = subcategory.subcategory_name;
+                product_subcategory_id.appendChild(opt);  // Use appendChild for better performance
+            });
+        }
+    };
+
+    ajax.open("GET", "/admin_load_ajax?product_category_id=" + product_category_id.value, true);
+    ajax.send();
+}
+
+    </script>
+</head>
+<body onload="loadState()">
+
+<h1>Edit Product</h1>
+
+<div class="form-container">
+<form action="{% url 'admin_update_product' product_vo_lst.product_id %}"
+      method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <input type="hidden" name="product_id" value="{{ product_vo_lst.product_id }}">
+
+    <table>
+        <tr>
+            <td><label for="product_category_id">Category Name:</label></td>
+            <td>
+                <select id="product_category_id" name="product_category_id" onchange="loadState()">
+    {% for category in category_vo_lst %}
+        <option value="{{ category.category_id }}" {% if category.category_id == product_vo.product_category_id.category_id %}selected{% endif %}>
+            {{ category.category_name }}
+        </option>
+    {% endfor %}
+</select>
+
+<select id="product_subcategory_id" name="product_subcategory_id">
+    {% for subcategory in sub_category_vo_lst %}
+        <option value="{{ subcategory.subcategory_id }}" {% if subcategory.subcategory_id == product_vo.product_subcategory_id.subcategory_id %}selected{% endif %}>
+            {{ subcategory.subcategory_name }}
+        </option>
+    {% endfor %}
+</select>
+
+            </td>
+        </tr>
+        <tr>
+            <td><label for="productName">Product Name:</label></td>
+            <td><input type="text" id="productName" name="productName" value="{{ product_vo_lst.product_name }}" required></td>
+        </tr>
+        <tr>
+            <td><label for="productPrice">Price:</label></td>
+            <td><input type="number" id="productPrice" name="productPrice" step="0.01" value="{{ product_vo_lst.product_price }}" required></td>
+        </tr>
+        <tr>
+            <td><label for="productDescription">Description:</label></td>
+            <td><textarea id="productDescription" name="productDescription" rows="4" required>{{ product_vo_lst.product_description }}</textarea></td>
+        </tr>
+        <tr>
+            <td><label for="productImage">Current Image:</label></td>
+            <td>
+                {% load static %}
+                <a href="{% static 'product_image/' %}{{ product_vo_lst.product_image_name }}"
+                   target="_blank">
+                    <img src="{% static 'product_image/' %}{{ product_vo_lst.product_image_name }}"
+                         alt="Product Image">
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="productImage">Upload New Image:</label></td>
+            <td><input type="file" id="productImage" name="productImage"></td>
+        </tr>
+        <tr>
+            <td><label for="productQuantity">Quantity:</label></td>
+            <td><input type="number" id="productQuantity" name="productQuantity" value="{{ product_vo_lst.product_quantity }}" required></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button type="submit">Update</button></td>
+        </tr>
+    </table>
+</form>
+
+</div>
+
+</body>
+</html>

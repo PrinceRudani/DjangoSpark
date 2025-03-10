@@ -6,60 +6,125 @@
     <title>Admin Portal</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             height: 100vh;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            font-size: 28px;
             text-align: center;
+            font-weight: bold;
         }
-        .button-group {
-            margin: 10px 0;
+
+        table {
+            width: 60%;
+            border-collapse: collapse;
+            margin: 0 auto;
         }
-        button {
-            margin: 5px;
-            padding: 10px;
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
             font-size: 16px;
         }
+
+        th {
+            background-color: #f0f0f0;
+            font-weight: normal;
+        }
+
+        td {
+            background-color: #ffffff;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 180px; /* Consistent width */
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #e6e6e6;
+            border-color: #ccc;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-around;
+            gap: 10px; /* Space between buttons */
+            flex-wrap: nowrap; /* Prevent wrapping */
+        }
+
+        .button-group a {
+            text-decoration: none;
+        }
+
+        td .button-group {
+            display: flex;
+            justify-content: center;
+        }
+
     </style>
 </head>
 <body>
-    <h1>Welcome Admin!</h1>
 
-    <div class="button-group">
-        <a href="/load_register">
-            <button class="register-btn">Register</button>
-        </a>
-        <a href="/logout">
-            <button class="logout-btn">Logout</button>
-        </a>
+    <div>
+        <h1>Welcome Admin!</h1>
+
+        <table>
+            <tr>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="button-group">
+                        <a href="/load_register"><button class="register-btn">Register</button></a>
+                        <a href="/logout"><button class="logout-btn">Logout</button></a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="button-group">
+                        <a href="/admin_load_category"><button>Add Category</button></a>
+                        <a href="/admin_view_category"><button>View Categories</button></a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="button-group">
+                        <a href="/admin_load_subcategory"><button>Add Subcategory</button></a>
+                        <a href="/admin_view_subcategory"><button>View Subcategories</button></a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="button-group">
+                        <a href="/admin_load_product"><button>Add Product</button></a>
+                        <a href="/admin_view_product"><button>View Products</button></a>
+                    </div>
+                </td>
+            </tr>
+        </table>
     </div>
 
-    <div class="button-group">
-        <a href="/admin_load_category">
-            <button type="button">Add Category</button>
-        </a>
-        <a href="/admin_view_category">
-            <button type="button">View Categories</button>
-        </a>
-    </div>
-
-    <div class="button-group">
-        <a href="/admin_load_subcategory">
-            <button type="button">Add Subcategory</button>
-        </a>
-        <a href="/admin_view_subcategory">
-            <button type="button">View Subcategories</button>
-        </a>
-    </div>
-
-    <div class="button-group">
-        <a href="/load_product">
-            <button type="button">Add Product</button>
-        </a>
-        <a href="/view_product">
-            <button type="button">View Products</button>
-        </a>
-    </div>
 </body>
 </html>
