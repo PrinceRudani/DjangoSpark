@@ -17,8 +17,8 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 config = configparser.ConfigParser()
-config.read(Path(BASE_DIR, 'config.ini'))  # Assume you save the config in 'config.ini'
-
+config.read(
+    Path(BASE_DIR, 'config.ini'))  # Assume you save the config in 'config.ini'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -28,6 +28,8 @@ SECRET_KEY = 'django-insecure-p)(oab=4bmw*6$=b=ay9%s49we9seru&f-6j^_+)=)n6ngb5ty
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+APPEND_SLASH = False
 
 ALLOWED_HOSTS = ['127.0.0.1']
 
@@ -60,11 +62,10 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'DjangoProject.urls'
 
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],  # Add this line
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,7 +77,6 @@ TEMPLATES = [
         },
     },
 ]
-
 
 WSGI_APPLICATION = 'DjangoProject.wsgi.application'
 
@@ -122,7 +122,6 @@ ALGORITHMS = {
     'ENCODING': config['ALGORITHMS']['ENCODING'],
     'HASH_ALGORITHM': config['ALGORITHMS']['HASH_ALGORITHM'],
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Subcategory</title>
+</head>
+<body>
+
+<h1 align="center">Add a New Subcategory</h1>
+
+{% if error_message %}
+    <div align="center">
+        {{ error_message }}
+    </div>
+{% endif %}
+
+<center>
+<form action="{% url 'admin_insert_subcategory' %}" method="POST">
+    {% csrf_token %}
+    <table border="1" cellpadding="10" cellspacing="0">
+        <tr>
+            <td><label for="subCategoryCategoryName">Category Name:</label></td>
+            <td>
+                <select id="subCategoryCategoryName" name="subCategoryCategoryName" required>
+                    <option value="" disabled selected>Select a Category</option>
+                    {% for category in sub_category_vo %}
+                        <option value="{{ category.category_id }}">{{ category.category_name }}</option>
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="subCategoryName">Subcategory Name:</label></td>
+            <td><input type="text" id="subCategoryName" name="subCategoryName" required></td>
+        </tr>
+        <tr>
+            <td><label for="subCategoryDescription">Subcategory Description:</label></td>
+            <td><textarea id="subCategoryDescription" name="subCategoryDescription" rows="3" required></textarea></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><button type="submit">Submit</button></td>
+        </tr>
+    </table>
+</form>
+
+</center>
+
+</body>
+</html>

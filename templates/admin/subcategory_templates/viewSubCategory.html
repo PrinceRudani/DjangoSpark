@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Subcategory Page</title>
+</head>
+<body>
+
+<h1 align="center">Subcategory List</h1>
+
+{% if error_message %}
+<div align="center">
+    {{ error_message }}
+</div>
+{% endif %}
+
+<center>
+    <table border="1" cellpadding="10" cellspacing="0">
+        <tr>
+            <th>Category Name</th>
+            <th>Subcategory Name</th>
+            <th>Subcategory Description</th>
+            <th>Actions</th>
+        </tr>
+
+        {% for category in sub_category_vo %}
+        <tr>
+            <td>{{ category.subcategory_category_id }}</td>
+            <td>{{ category.subcategory_name }}</td>
+            <td>{{ category.subcategory_description }}</td>
+            <td>
+                <form method="POST" action="/admin_delete_subcategory/">
+                    {% csrf_token %}
+                    <input type="hidden" name="subcategory_id"
+                           value="{{ category.subcategory_id }}">
+                    <button type="submit">Delete</button>
+                </form>
+
+                <form
+                        action="/admin_edit_subcategory/{{ category.subcategory_id }}"
+                      method="GET" style="display: inline;">
+                    <button type="submit">Update</button>
+                </form>
+            </td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+    <br>
+
+    <table>
+        <tr>
+            <td><a href="/load_sub_category">
+                <button type="button">Add New Subcategory</button>
+            </a></td>
+            <td><a href="admin/home">
+                <button type="button">Home Page</button>
+            </a></td>
+        </tr>
+    </table>
+</center>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Subcategory</title>
+</head>
+<body>
+
+<h1>Edit Subcategory</h1>
+
+<div class="form-container">
+    <form action="/update_sub_category/{{ sub_category.sub_category_id }}" method="POST">
+        <label for="subCategoryCategoryId">Category Name:</label>
+        <select name="subCategoryCategoryId" id="subCategoryCategoryId">
+            {% for category in category_vo_lst %}
+                <option value="{{ category.category_id }}"
+                        {% if category.category_id == sub_category.subcategory_category_id %}
+                        selected {% endif %}>
+                    {{ category.category_name }}
+                </option>
+            {% endfor %}
+        </select>
+
+        <label for="subCategoryName">Subcategory Name:</label>
+        <input type="text" name="subCategoryName" id="subCategoryName" value="{{ sub_category.sub_category_name }}" required>
+
+        <label for="subCategoryDescription">Subcategory Description:</label>
+        <textarea name="subCategoryDescription" id="subCategoryDescription" rows="4" required>{{ sub_category.sub_category_description }}</textarea>
+
+        <button type="submit">Update</button>
+    </form>
+</div>
+
+</body>
+</html>
