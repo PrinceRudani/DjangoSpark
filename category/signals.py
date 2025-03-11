@@ -23,6 +23,7 @@ def category_saved(sender, instance, created, **kwargs):
         "timestamp": now().isoformat(),
         "action": "Created" if created else "Updated",
     }
+    print(log_data)
     logger.info(f"Signal Triggered: {log_data}")
 
 
@@ -40,4 +41,5 @@ def category_soft_deleted(sender, instance, **kwargs):
             "timestamp": now().isoformat(),
             "action": "Soft Deleted",
         }
+        print(log_data)
         logger.info(f"Signal Triggered: {log_data}")

@@ -54,3 +54,239 @@
 
 2025-03-11 08:30:03,511 - signals.py - FlaskMVCProject -  product_saved - INFO - Signal Triggered: {'signal': 'post_save', 'sender': 'ProductVO', 'product_id': 30, 'product_name': 'defrv', 'action': 'Updated'}
 
+2025-03-11 08:57:08,853 - views.py - FlaskMVCProject -  home - INFO -  load Home Page 
+
+2025-03-11 08:57:17,791 - signals.py - FlaskMVCProject -  product_saved - INFO - Signal Triggered: {'signal': 'post_save', 'sender': 'ProductVO', 'product_id': 41, 'product_name': 'wdec', 'action': 'Created'}
+
+2025-03-11 08:57:22,044 - signals.py - FlaskMVCProject -  product_deleted - INFO - Signal Triggered: {'signal': 'soft_delete', 'sender': 'ProductVO', 'product_id': 41, 'product_name': 'wdec', 'action': 'Soft Deleted'}
+
+2025-03-11 09:18:42,828 - signals.py - FlaskMVCProject -  category_saved - INFO - Signal Triggered: {'signal': 'post_save', 'sender': 'CategoryVO', 'category_id': 38, 'category_name': 'wefrv', 'category_description': 'edfv', 'is_deleted': False, 'timestamp': '2025-03-11T09:18:42.828026+00:00', 'action': 'Created'}
+
+2025-03-11 09:18:42,828 - views.py - FlaskMVCProject -  admin_insert_category - INFO - Added category 'wefrv'
+
+2025-03-11 09:18:45,570 - signals.py - FlaskMVCProject -  category_soft_deleted - INFO - Signal Triggered: {'signal': 'soft_delete', 'sender': 'CategoryVO', 'category_id': 38, 'category_name': 'wefrv', 'category_description': 'edfv', 'is_deleted': True, 'timestamp': '2025-03-11T09:18:45.570129+00:00', 'action': 'Soft Deleted'}
+
+2025-03-11 09:18:51,164 - signals.py - FlaskMVCProject -  category_saved - INFO - Signal Triggered: {'signal': 'post_save', 'sender': 'CategoryVO', 'category_id': 35, 'category_name': 'Default Categoryyy', 'category_description': 'A default category description', 'is_deleted': False, 'timestamp': '2025-03-11T09:18:51.164850+00:00', 'action': 'Updated'}
+
+2025-03-11 09:18:53,310 - views.py - FlaskMVCProject -  home - INFO -  load Home Page 
+
+2025-03-11 09:19:00,566 - signals.py - FlaskMVCProject -  post_save_subcategory - INFO - Signal Triggered: {'signal': 'post_save', 'sender': 'SubCategoryVO', 'instance': <SubCategoryVO: dell>, 'subcategory_id': 5, 'subcategory_name': 'dell', 'action': 'Created'}
+
+2025-03-11 09:19:09,903 - signals.py - FlaskMVCProject -  post_save_subcategory - INFO - Signal Triggered: {'signal': 'post_save', 'sender': 'SubCategoryVO', 'instance': <SubCategoryVO: dell>, 'subcategory_id': 5, 'subcategory_name': 'dell', 'action': 'Updated'}
+
+2025-03-11 09:19:12,014 - signals.py - FlaskMVCProject -  subcategory_deleted - INFO - Signal Triggered: {'signal': 'soft_delete', 'sender': 'SubCategoryVO', 'product_id': 5, 'product_name': 'dell', 'action': 'Soft Deleted'}
+
+2025-03-11 09:19:12,941 - views.py - FlaskMVCProject -  home - INFO -  load Home Page 
+
+2025-03-11 09:19:39,075 - signals.py - FlaskMVCProject -  product_saved - INFO - Signal Triggered: {'signal': 'post_save', 'sender': 'ProductVO', 'product_id': 42, 'product_name': 'inspiron', 'action': 'Created'}
+
+2025-03-11 09:19:46,635 - signals.py - FlaskMVCProject -  product_saved - INFO - Signal Triggered: {'signal': 'post_save', 'sender': 'ProductVO', 'product_id': 42, 'product_name': 'inspiron', 'action': 'Updated'}
+
+2025-03-11 09:19:56,085 - signals.py - FlaskMVCProject -  product_deleted - INFO - Signal Triggered: {'signal': 'soft_delete', 'sender': 'ProductVO', 'product_id': 42, 'product_name': 'inspiron', 'action': 'Soft Deleted'}
+
+2025-03-11 09:21:15,846 - signals.py - FlaskMVCProject -  product_saved - INFO - Signal Triggered: {'signal': 'post_save', 'sender': 'ProductVO', 'product_id': 43, 'product_name': 'awertyh', 'action': 'Created'}
+
+2025-03-11 09:21:22,281 - signals.py - FlaskMVCProject -  product_saved - INFO - Signal Triggered: {'signal': 'post_save', 'sender': 'ProductVO', 'product_id': 43, 'product_name': 'awertyh', 'action': 'Updated'}
+
+2025-03-11 09:21:27,088 - signals.py - FlaskMVCProject -  product_deleted - INFO - Signal Triggered: {'signal': 'soft_delete', 'sender': 'ProductVO', 'product_id': 43, 'product_name': 'awertyh', 'action': 'Soft Deleted'}
+
+2025-03-11 11:01:17,411 - views.py - FlaskMVCProject -  home - INFO -  load Home Page 
+
+2025-03-11 11:01:18,402 - views.py - FlaskMVCProject -  admin_load_category - INFO - Loading category creation form
+
+2025-03-11 11:01:22,372 - views.py - FlaskMVCProject -  admin_insert_category - ERROR - Failed to insert category: (1062, "Duplicate entry 'prince' for key 'category_table.category_name'")
+
+2025-03-11 11:01:34,747 - views.py - FlaskMVCProject -  admin_insert_category - ERROR - Failed to insert category: (1062, "Duplicate entry 'prince' for key 'category_table.category_name'")
+
+2025-03-11 11:01:55,073 - views.py - FlaskMVCProject -  admin_insert_category - ERROR - Failed to insert category: (1062, "Duplicate entry 'prince' for key 'category_table.category_name'")
+
+2025-03-11 11:04:02,956 - views.py - FlaskMVCProject -  admin_load_category - INFO - Loading category creation form
+
+2025-03-11 11:04:03,102 - views.py - FlaskMVCProject -  admin_load_category - INFO - Loading category creation form
+
+2025-03-11 11:04:03,275 - views.py - FlaskMVCProject -  admin_load_category - INFO - Loading category creation form
+
+2025-03-11 11:04:06,923 - views.py - FlaskMVCProject -  admin_insert_category - WARNING - Category with name 'prince' already exists
+
+2025-03-11 11:04:06,923 - views.py - FlaskMVCProject -  admin_insert_category - ERROR - AppException: Error: Category with this name already exists, Code: 400, Data: prince
+
+2025-03-11 11:04:45,037 - views.py - FlaskMVCProject -  admin_load_category - INFO - Loading category creation form
+
+2025-03-11 11:04:49,249 - views.py - FlaskMVCProject -  admin_insert_category - WARNING - Category with name 'prince' already exists
+
+2025-03-11 11:04:49,250 - views.py - FlaskMVCProject -  admin_insert_category - ERROR - AppException: Error: Category with this name already exists, Code: 400, Data: prince
+
+2025-03-11 11:10:50,240 - views.py - FlaskMVCProject -  admin_load_category - INFO - Loading category creation form
+
+2025-03-11 11:10:52,322 - signals.py - FlaskMVCProject -  category_saved - INFO - Signal Triggered: {'signal': 'post_save', 'sender': 'CategoryVO', 'category_id': 42, 'category_name': 'efv', 'category_description': 'ev', 'is_deleted': False, 'timestamp': '2025-03-11T11:10:52.322465+00:00', 'action': 'Created'}
+
+2025-03-11 11:10:52,322 - views.py - FlaskMVCProject -  admin_insert_category - INFO - Added new category 'efv' with description 'ev'
+
+2025-03-11 11:10:52,326 - views.py - FlaskMVCProject -  admin_view_category - INFO - Viewing all categories. Total active categories: 7
+
+2025-03-11 16:58:46,087 - views.py - FlaskMVCProject -  home - INFO -  load Home Page 
+
+2025-03-11 16:58:47,399 - views.py - FlaskMVCProject -  admin_load_category - DEBUG - Loading category form
+
+2025-03-11 16:58:51,533 - views.py - FlaskMVCProject -  admin_insert_category - ERROR - Error in admin_insert_category: (1062, "Duplicate entry 'prince' for key 'category_table.category_name'")
+
+2025-03-11 16:58:51,533 - custome_exception.py - FlaskMVCProject -  handle_exception - ERROR - Exception error message: Exception type: <class 'django.db.utils.IntegrityError'>, Exception message: (1062, "Duplicate entry 'prince' for key 'category_table.category_name'"), Filename: /home/prince/PycharmProjects/DjangoProject/category/views.py, Function name: admin_insert_category Line number: 25
+
+2025-03-11 16:58:55,469 - signals.py - FlaskMVCProject -  category_saved - INFO - Signal Triggered: {'signal': 'post_save', 'sender': 'CategoryVO', 'category_id': 44, 'category_name': 'fe', 'category_description': 'rudani', 'is_deleted': False, 'timestamp': '2025-03-11T16:58:55.468983+00:00', 'action': 'Created'}
+
+2025-03-11 16:58:55,469 - views.py - FlaskMVCProject -  admin_insert_category - INFO - Added category 'fe'
+
+2025-03-11 16:58:55,475 - views.py - FlaskMVCProject -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-11 16:59:05,940 - views.py - FlaskMVCProject -  admin_edit_category - DEBUG - Editing category 'fe'
+
+2025-03-11 16:59:09,351 - signals.py - FlaskMVCProject -  category_saved - INFO - Signal Triggered: {'signal': 'post_save', 'sender': 'CategoryVO', 'category_id': 44, 'category_name': 'fe', 'category_description': 'rudaniwddv', 'is_deleted': False, 'timestamp': '2025-03-11T16:59:09.351805+00:00', 'action': 'Updated'}
+
+2025-03-11 16:59:09,352 - views.py - FlaskMVCProject -  admin_update_category - INFO - Updated category 'fe'
+
+2025-03-11 16:59:09,358 - views.py - FlaskMVCProject -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-12 04:20:35,766 - views.py - FlaskMVCProject -  home - INFO -  load Home Page 
+
+2025-03-12 04:20:42,884 - views.py - FlaskMVCProject -  admin_load_category - DEBUG - Loading category form
+
+2025-03-12 04:20:50,506 - views.py - FlaskMVCProject -  admin_insert_category - ERROR - Error in admin_insert_category: (1062, "Duplicate entry 'prince' for key 'category_table.category_name'")
+
+2025-03-12 04:20:50,507 - custome_exception.py - FlaskMVCProject -  handle_exception - ERROR - Exception error message: Exception type: <class 'django.db.utils.IntegrityError'>, Exception message: (1062, "Duplicate entry 'prince' for key 'category_table.category_name'"), Filename: /home/prince/PycharmProjects/DjangoProject/category/views.py, Function name: admin_insert_category Line number: 25
+
+2025-03-12 04:20:55,054 - views.py - FlaskMVCProject -  admin_insert_category - ERROR - Error in admin_insert_category: (1062, "Duplicate entry 'prince' for key 'category_table.category_name'")
+
+2025-03-12 04:20:55,054 - custome_exception.py - FlaskMVCProject -  handle_exception - ERROR - Exception error message: Exception type: <class 'django.db.utils.IntegrityError'>, Exception message: (1062, "Duplicate entry 'prince' for key 'category_table.category_name'"), Filename: /home/prince/PycharmProjects/DjangoProject/category/views.py, Function name: admin_insert_category Line number: 25
+
+2025-03-12 04:21:01,108 - signals.py - FlaskMVCProject -  category_saved - INFO - Signal Triggered: {'signal': 'post_save', 'sender': 'CategoryVO', 'category_id': 47, 'category_name': 'princedw', 'category_description': 'ruejvn', 'is_deleted': False, 'timestamp': '2025-03-12T04:21:01.108893+00:00', 'action': 'Created'}
+
+2025-03-12 04:21:01,109 - views.py - FlaskMVCProject -  admin_insert_category - INFO - Added category 'princedw'
+
+2025-03-12 04:21:01,115 - views.py - FlaskMVCProject -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-12 04:22:16,975 - signals.py - FlaskMVCProject -  category_saved - INFO - Signal Triggered: {'signal': 'post_save', 'sender': 'CategoryVO', 'category_id': 48, 'category_name': 'wcs', 'category_description': 'ruejvn', 'is_deleted': False, 'timestamp': '2025-03-12T04:22:16.975021+00:00', 'action': 'Created'}
+
+2025-03-12 04:22:16,975 - views.py - FlaskMVCProject -  admin_insert_category - INFO - Added category 'wcs'
+
+2025-03-12 04:22:17,005 - views.py - FlaskMVCProject -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-12 04:23:08,236 - signals.py - FlaskMVCProject -  category_soft_deleted - INFO - Signal Triggered: {'signal': 'soft_delete', 'sender': 'CategoryVO', 'category_id': 34, 'category_name': 'princeesss', 'category_description': 'rudani', 'is_deleted': True, 'timestamp': '2025-03-12T04:23:08.236751+00:00', 'action': 'Soft Deleted'}
+
+2025-03-12 04:23:08,240 - views.py - FlaskMVCProject -  admin_delete_category - INFO - Deleted category 'princeesss'
+
+2025-03-12 04:23:08,249 - views.py - FlaskMVCProject -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-12 04:23:10,943 - signals.py - FlaskMVCProject -  category_soft_deleted - INFO - Signal Triggered: {'signal': 'soft_delete', 'sender': 'CategoryVO', 'category_id': 35, 'category_name': 'Default Categoryyy', 'category_description': 'A default category description', 'is_deleted': True, 'timestamp': '2025-03-12T04:23:10.943037+00:00', 'action': 'Soft Deleted'}
+
+2025-03-12 04:23:10,947 - views.py - FlaskMVCProject -  admin_delete_category - INFO - Deleted category 'Default Categoryyy'
+
+2025-03-12 04:23:10,950 - views.py - FlaskMVCProject -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-12 04:23:13,641 - signals.py - FlaskMVCProject -  category_soft_deleted - INFO - Signal Triggered: {'signal': 'soft_delete', 'sender': 'CategoryVO', 'category_id': 42, 'category_name': 'efv', 'category_description': 'ev', 'is_deleted': True, 'timestamp': '2025-03-12T04:23:13.640976+00:00', 'action': 'Soft Deleted'}
+
+2025-03-12 04:23:13,645 - views.py - FlaskMVCProject -  admin_delete_category - INFO - Deleted category 'efv'
+
+2025-03-12 04:23:13,650 - views.py - FlaskMVCProject -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-12 04:23:15,657 - signals.py - FlaskMVCProject -  category_soft_deleted - INFO - Signal Triggered: {'signal': 'soft_delete', 'sender': 'CategoryVO', 'category_id': 44, 'category_name': 'fe', 'category_description': 'rudaniwddv', 'is_deleted': True, 'timestamp': '2025-03-12T04:23:15.657251+00:00', 'action': 'Soft Deleted'}
+
+2025-03-12 04:23:15,660 - views.py - FlaskMVCProject -  admin_delete_category - INFO - Deleted category 'fe'
+
+2025-03-12 04:23:15,664 - views.py - FlaskMVCProject -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-12 04:23:17,540 - signals.py - FlaskMVCProject -  category_soft_deleted - INFO - Signal Triggered: {'signal': 'soft_delete', 'sender': 'CategoryVO', 'category_id': 47, 'category_name': 'princedw', 'category_description': 'ruejvn', 'is_deleted': True, 'timestamp': '2025-03-12T04:23:17.540940+00:00', 'action': 'Soft Deleted'}
+
+2025-03-12 04:23:17,544 - views.py - FlaskMVCProject -  admin_delete_category - INFO - Deleted category 'princedw'
+
+2025-03-12 04:23:17,549 - views.py - FlaskMVCProject -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-12 04:23:20,224 - signals.py - FlaskMVCProject -  category_soft_deleted - INFO - Signal Triggered: {'signal': 'soft_delete', 'sender': 'CategoryVO', 'category_id': 48, 'category_name': 'wcs', 'category_description': 'ruejvn', 'is_deleted': True, 'timestamp': '2025-03-12T04:23:20.224851+00:00', 'action': 'Soft Deleted'}
+
+2025-03-12 04:23:20,227 - views.py - FlaskMVCProject -  admin_delete_category - INFO - Deleted category 'wcs'
+
+2025-03-12 04:23:20,230 - views.py - FlaskMVCProject -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-12 04:25:57,888 - views.py - FlaskMVCProject -  home - INFO -  load Home Page 
+
+2025-03-12 04:25:59,965 - views.py - FlaskMVCProject -  admin_edit_subcategory - DEBUG - Editing subcategory 'chaniyacholi'
+
+2025-03-12 04:28:11,867 - views.py - FlaskMVCProject -  home - INFO -  load Home Page 
+
+2025-03-12 04:28:12,751 - views.py - FlaskMVCProject -  admin_view_product - INFO - Fetching all products
+
+2025-03-12 04:28:14,552 - views.py - FlaskMVCProject -  admin_load_product - INFO - Loading product form
+
+2025-03-12 04:28:16,505 - views.py - FlaskMVCProject -  admin_load_ajax - INFO - Fetching subcategories for category ID: 22
+
+2025-03-12 04:28:25,667 - views.py - FlaskMVCProject -  admin_insert_product - INFO - Inserting new product
+
+2025-03-12 04:28:25,672 - signals.py - FlaskMVCProject -  product_saved - INFO - Signal Triggered: {'signal': 'post_save', 'sender': 'ProductVO', 'product_id': 44, 'product_name': 'qwedf', 'action': 'Created'}
+
+2025-03-12 04:28:25,672 - views.py - FlaskMVCProject -  admin_insert_product - INFO - Product 'qwedf' inserted successfully
+
+2025-03-12 04:28:25,675 - views.py - FlaskMVCProject -  admin_view_product - INFO - Fetching all products
+
+2025-03-12 04:28:31,585 - views.py - FlaskMVCProject -  admin_edit_product - INFO - Loading edit form for product ID: 44
+
+2025-03-12 04:28:31,677 - views.py - FlaskMVCProject -  admin_load_ajax - INFO - Fetching subcategories for category ID: 22
+
+2025-03-12 04:28:38,026 - signals.py - FlaskMVCProject -  product_saved - INFO - Signal Triggered: {'signal': 'post_save', 'sender': 'ProductVO', 'product_id': 44, 'product_name': 'qwedf', 'action': 'Updated'}
+
+2025-03-12 04:28:38,026 - views.py - FlaskMVCProject -  admin_update_product - INFO - Updated product 'qwedf' successfully
+
+2025-03-12 04:28:38,028 - views.py - FlaskMVCProject -  admin_view_product - INFO - Fetching all products
+
+2025-03-12 04:28:45,018 - views.py - FlaskMVCProject -  admin_edit_product - INFO - Loading edit form for product ID: 44
+
+2025-03-12 04:28:45,110 - views.py - FlaskMVCProject -  admin_load_ajax - INFO - Fetching subcategories for category ID: 22
+
+2025-03-12 04:28:47,405 - signals.py - FlaskMVCProject -  product_saved - INFO - Signal Triggered: {'signal': 'post_save', 'sender': 'ProductVO', 'product_id': 44, 'product_name': 'qwedf', 'action': 'Updated'}
+
+2025-03-12 04:28:47,405 - views.py - FlaskMVCProject -  admin_update_product - INFO - Updated product 'qwedf' successfully
+
+2025-03-12 04:28:47,408 - views.py - FlaskMVCProject -  admin_view_product - INFO - Fetching all products
+
+2025-03-12 04:28:50,107 - views.py - FlaskMVCProject -  admin_view_product - INFO - Fetching all products
+
+2025-03-12 04:28:50,930 - views.py - FlaskMVCProject -  admin_view_product - INFO - Fetching all products
+
+2025-03-12 04:28:51,200 - views.py - FlaskMVCProject -  admin_view_product - INFO - Fetching all products
+
+2025-03-12 04:28:51,380 - views.py - FlaskMVCProject -  admin_view_product - INFO - Fetching all products
+
+2025-03-12 04:28:52,068 - views.py - FlaskMVCProject -  admin_view_product - INFO - Fetching all products
+
+2025-03-12 04:28:56,831 - views.py - FlaskMVCProject -  admin_view_product - INFO - Fetching all products
+
+2025-03-12 04:28:56,983 - views.py - FlaskMVCProject -  admin_view_product - INFO - Fetching all products
+
+2025-03-12 04:28:57,205 - views.py - FlaskMVCProject -  admin_view_product - INFO - Fetching all products
+
+2025-03-12 04:28:57,953 - views.py - FlaskMVCProject -  admin_view_product - INFO - Fetching all products
+
+2025-03-12 04:28:58,171 - views.py - FlaskMVCProject -  admin_view_product - INFO - Fetching all products
+
+2025-03-12 04:28:58,330 - views.py - FlaskMVCProject -  admin_view_product - INFO - Fetching all products
+
+2025-03-12 04:28:58,557 - views.py - FlaskMVCProject -  admin_view_product - INFO - Fetching all products
+
+2025-03-12 04:28:58,739 - views.py - FlaskMVCProject -  admin_view_product - INFO - Fetching all products
+
+2025-03-12 04:28:58,873 - views.py - FlaskMVCProject -  admin_view_product - INFO - Fetching all products
+
+2025-03-12 04:28:59,056 - views.py - FlaskMVCProject -  admin_view_product - INFO - Fetching all products
+
+2025-03-12 04:28:59,235 - views.py - FlaskMVCProject -  admin_view_product - INFO - Fetching all products
+
+2025-03-12 04:28:59,432 - views.py - FlaskMVCProject -  admin_view_product - INFO - Fetching all products
+
+2025-03-12 04:28:59,578 - views.py - FlaskMVCProject -  admin_view_product - INFO - Fetching all products
+
+2025-03-12 04:28:59,756 - views.py - FlaskMVCProject -  admin_view_product - INFO - Fetching all products
+
+2025-03-12 04:29:12,302 - views.py - FlaskMVCProject -  admin_view_product - INFO - Fetching all products
+
+2025-03-12 04:29:13,470 - views.py - FlaskMVCProject -  home - INFO -  load Home Page 
+
+2025-03-12 04:29:14,591 - views.py - FlaskMVCProject -  admin_view_product - INFO - Fetching all products
+

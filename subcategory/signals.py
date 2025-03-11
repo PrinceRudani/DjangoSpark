@@ -18,6 +18,7 @@ def post_save_subcategory(sender, instance, created, **kwargs):
         "subcategory_name": instance.subcategory_name,
         "action": "Created" if created else "Updated",
     }
+    print(log_data)
     logger.info(f"Signal Triggered: {log_data}")
 
 @receiver(pre_save, sender=SubCategoryVO)
@@ -30,4 +31,5 @@ def subcategory_deleted(sender, instance, **kwargs):
             "product_name": instance.subcategory_name,
             "action": "Soft Deleted",
         }
+        print(log_data)
         logger.info(f"Signal Triggered: {log_data}")

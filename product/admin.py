@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.utils.html import format_html
+
 from product.models import ProductVO
 
 
@@ -16,7 +17,8 @@ class ProductVOAdmin(admin.ModelAdmin):
     def product_image_tag(self, obj):
         if obj.product_image_path:
             return format_html(
-                f'<img src="/{obj.product_image_path}" width="50" height="50" style="border-radius:5px;"/>')
+                f'<img src="/{obj.product_image_path}" width="70" '
+                f'height="70" style="border-radius:5px;"/>')
         return "No Image"
 
     product_image_tag.short_description = "Image"

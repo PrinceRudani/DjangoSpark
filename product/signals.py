@@ -20,6 +20,7 @@ def product_saved(sender, instance, created, **kwargs):
         "product_name": instance.product_name,
         "action": "Created" if created else "Updated",
     }
+    print(log_data)
     logger.info(f"Signal Triggered: {log_data}")
 
 
@@ -34,4 +35,5 @@ def product_deleted(sender, instance, **kwargs):
             "product_name": instance.product_name,
             "action": "Soft Deleted",
         }
+        print(log_data)
         logger.info(f"Signal Triggered: {log_data}")
