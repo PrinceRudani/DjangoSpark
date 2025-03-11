@@ -9,9 +9,9 @@
 
 <h1 align="center">Add a New Subcategory</h1>
 
-{% if error_message %}
+{% if message %}
     <div align="center">
-        {{ error_message }}
+        <strong>{{ message }}</strong>
     </div>
 {% endif %}
 
@@ -43,7 +43,6 @@
         </tr>
     </table>
 </form>
-
 </center>
 
 </body>
