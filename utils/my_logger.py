@@ -12,7 +12,8 @@ def get_logger():
     file_handler = RotatingFileHandler("app.log")  # store logs in app.log
 
     formatter = logging.Formatter(
-        "%(asctime)s - %(filename)s - %(name)s -  %(funcName)s - %(levelname)s - %(message)s\n")
+        "%(asctime)s - %(filename)s - %(name)s -  %(funcName)s - %(levelname)s - %(message)s\n"
+    )
 
     file_handler.setFormatter(formatter)
 

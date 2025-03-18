@@ -2,11 +2,11 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('base.urls')),
-    path('', include('category.urls')),
-    path('', include('subcategory.urls')),
-    path('', include('product.urls')),
-    path('', include('login.urls')),
-    path('', include('register.urls'))
+    path("admin/", admin.site.urls),
+    path("", include("base.urls")),
+    path("", include("category.urls")),
+    path("", include("subcategory.urls")),
+    path("", include("product.urls")),
+    path("", include("login.urls")),
+    path("", include("register.urls")),
 ]

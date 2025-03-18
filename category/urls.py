@@ -14,22 +14,30 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 # category/urls.py
 from django.urls import path
 
 from . import views
 
 urlpatterns = [
-    path('admin_load_category/', views.admin_load_category,
-         name='admin_load_category'),
-    path('admin_insert_category/', views.admin_insert_category,
-         name='admin_insert_category'),
-    path('admin_view_category/', views.admin_view_category,
-         name='admin_view_category'),
-    path('admin_delete_category/', views.admin_delete_category,
-         name='admin_delete_category'),
-    path('admin_edit_category/', views.admin_edit_category,
-         name='admin_edit_category'),
-    path('catjson/', views.catgory_details,
-         name='catgory_details'),
+    path("admin_load_category/", views.admin_load_category, name="admin_load_category"),
+    path(
+        "admin_insert_category/",
+        views.admin_insert_category,
+        name="admin_insert_category",
+    ),
+    path("admin_view_category/", views.admin_view_category, name="admin_view_category"),
+    path(
+        "admin_delete_category/",
+        views.admin_delete_category,
+        name="admin_delete_category",
+    ),
+    path("admin_edit_category/", views.admin_edit_category, name="admin_edit_category"),
+    path(
+        "admin_update_category/",
+        views.admin_update_category,
+        name="admin_update_category",
+    ),
+    path("category_json/", views.category_json, name="category_json"),
 ]

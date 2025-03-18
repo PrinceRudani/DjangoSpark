@@ -10,7 +10,7 @@ class CategoryVO(models.Model):
     modify_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return '{}''{}'.format(self.category_name, self.category_description)
+        return "{}" "{}".format(self.category_name, self.category_description)
 
     def as_dict(self):
         return {

@@ -254,3 +254,94 @@
 
 2025-03-18 06:50:38,828 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
 
+2025-03-18 08:08:08,754 - views.py - DjangoCRUD -  admin_view_subcategory - DEBUG - Fetching all subcategories
+
+2025-03-18 08:08:20,551 - views.py - DjangoCRUD -  admin_view_product - INFO - Fetching all products
+
+2025-03-18 08:08:26,865 - views.py - DjangoCRUD -  admin_view_product - INFO - Fetching all products
+
+2025-03-18 08:08:29,800 - views.py - DjangoCRUD -  admin_view_subcategory - DEBUG - Fetching all subcategories
+
+2025-03-18 08:08:33,126 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 08:08:35,167 - views.py - DjangoCRUD -  admin_load_category - DEBUG - Loading category form
+
+2025-03-18 08:09:08,139 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 08:09:14,669 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 08:16:44,364 - views.py - DjangoCRUD -  admin_view_subcategory - DEBUG - Fetching all subcategories
+
+2025-03-18 08:17:16,183 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 08:19:57,328 - views.py - DjangoCRUD -  admin_view_subcategory - DEBUG - Fetching all subcategories
+
+2025-03-18 08:20:51,850 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 08:22:10,960 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 08:25:53,699 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 08:25:56,099 - views.py - DjangoCRUD -  admin_view_subcategory - DEBUG - Fetching all subcategories
+
+2025-03-18 08:25:57,770 - views.py - DjangoCRUD -  admin_view_product - INFO - Fetching all products
+
+2025-03-18 08:26:05,458 - views.py - DjangoCRUD -  admin_load_subcategory - DEBUG - Loading subcategory form
+
+2025-03-18 08:26:49,562 - views.py - DjangoCRUD -  admin_load_subcategory - DEBUG - Loading subcategory form
+
+2025-03-18 09:47:50,089 - views.py - DjangoCRUD -  admin_view_product - INFO - Fetching all products
+
+2025-03-18 09:47:56,645 - views.py - DjangoCRUD -  admin_view_subcategory - DEBUG - Fetching all subcategories
+
+2025-03-18 09:48:00,206 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 10:22:52,494 - views.py - DjangoCRUD -  admin_delete_product - ERROR - Failed to delete product
+Traceback (most recent call last):
+  File "/home/prince/PycharmProjects/DjangoSpark/product/views.py", line 99, in admin_delete_product
+    product_vo = ProductVO.objects.get(
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/prince/anaconda3/envs/DjangoProject/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/prince/anaconda3/envs/DjangoProject/lib/python3.11/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+product.models.ProductVO.DoesNotExist: ProductVO matching query does not exist.
+2025-03-18 11:28:28,116 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 11:28:29,177 - views.py - DjangoCRUD -  admin_edit_category - DEBUG - Editing category 'Fashion & Accessories'
+
+2025-03-18 11:28:29,180 - views.py - DjangoCRUD -  admin_edit_category - ERROR - Error in admin_edit_category: Reverse for 'admin_update_category' not found. 'admin_update_category' is not a valid view function or pattern name.
+
+2025-03-18 11:28:50,976 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 11:28:51,934 - views.py - DjangoCRUD -  admin_edit_category - DEBUG - Editing category 'Electronics'
+
+2025-03-18 11:28:53,416 - signals.py - DjangoCRUD -  category_saved - INFO - Signal Triggered: {'signal': 'post_save', 'sender': 'CategoryVO', 'category_id': 2, 'category_name': 'Electronics', 'category_description': 'working with electricity\r\n', 'is_deleted': False, 'timestamp': '2025-03-18T11:28:53.416308+00:00', 'action': 'Updated'}
+
+2025-03-18 11:28:53,416 - views.py - DjangoCRUD -  admin_update_category - INFO - Updated category 'Electronics'
+
+2025-03-18 11:28:53,420 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 11:34:51,645 - views.py - DjangoCRUD -  admin_load_category - DEBUG - Loading category form
+
+2025-03-18 11:35:06,908 - signals.py - DjangoCRUD -  category_saved - INFO - Signal Triggered: {'signal': 'post_save', 'sender': 'CategoryVO', 'category_id': 10, 'category_name': 'prince', 'category_description': 'rudani', 'is_deleted': False, 'timestamp': '2025-03-18T11:35:06.908475+00:00', 'action': 'Created'}
+
+2025-03-18 11:35:06,908 - views.py - DjangoCRUD -  admin_insert_category - INFO - Added category 'prince'
+
+2025-03-18 11:35:06,911 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 11:37:11,420 - views.py - DjangoCRUD -  admin_view_product - INFO - Fetching all products
+
+2025-03-18 11:37:16,575 - views.py - DjangoCRUD -  admin_view_product - INFO - Fetching all products
+
+2025-03-18 11:37:17,094 - views.py - DjangoCRUD -  admin_view_product - INFO - Fetching all products
+
+2025-03-18 11:37:18,911 - views.py - DjangoCRUD -  admin_edit_product - INFO - Loading edit form for product ID: 2
+
+2025-03-18 11:37:19,141 - views.py - DjangoCRUD -  admin_load_ajax - INFO - Fetching subcategories for category ID: 2
+
+2025-03-18 11:38:39,118 - views.py - DjangoCRUD -  admin_load_category - DEBUG - Loading category form
+
+2025-03-18 11:38:43,808 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+

@@ -6,6 +6,7 @@ from utils.my_logger import get_logger
 
 logger = get_logger()
 
+
 @receiver(post_save, sender=SubCategoryVO)
 def post_save_subcategory(sender, instance, created, **kwargs):
     if instance.is_deleted:
@@ -19,6 +20,7 @@ def post_save_subcategory(sender, instance, created, **kwargs):
         "action": "Created" if created else "Updated",
     }
     logger.info(f"Signal Triggered: {log_data}")
+
 
 @receiver(pre_save, sender=SubCategoryVO)
 def subcategory_deleted(sender, instance, **kwargs):

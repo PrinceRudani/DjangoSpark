@@ -1,8 +1,5 @@
-from django.http import HttpResponse
 from rest_framework import serializers
-from rest_framework.renderers import JSONRenderer
 
-from .models import CategoryVO
 
 class CategorySerializer(serializers.Serializer):
     category_id = serializers.IntegerField(read_only=True)
@@ -11,4 +8,3 @@ class CategorySerializer(serializers.Serializer):
     is_deleted = serializers.BooleanField(default=False)
     create_at = serializers.DateTimeField(read_only=True)
     modify_at = serializers.DateTimeField(read_only=True)
-

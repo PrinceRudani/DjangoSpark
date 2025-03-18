@@ -13,12 +13,12 @@ class ProductVO(models.Model):
     product_quantity = models.IntegerField()
     product_image_name = models.ImageField()
     product_image_path = models.TextField()
-    product_category_id = models.ForeignKey(CategoryVO,
-                                            on_delete=models.PROTECT,
-                                            db_column='product_category_vo')
-    product_subcategory_id = models.ForeignKey(SubCategoryVO,
-                                               on_delete=models.PROTECT,
-                                               db_column='product_subcategory_vo')
+    product_category_id = models.ForeignKey(
+        CategoryVO, on_delete=models.PROTECT, db_column="product_category_vo"
+    )
+    product_subcategory_id = models.ForeignKey(
+        SubCategoryVO, on_delete=models.PROTECT, db_column="product_subcategory_vo"
+    )
     is_deleted = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -40,4 +40,4 @@ class ProductVO(models.Model):
         }
 
     class Meta:
-        db_table = 'product_table'
+        db_table = "product_table"
