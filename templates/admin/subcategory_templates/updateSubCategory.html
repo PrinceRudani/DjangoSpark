@@ -4,31 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Subcategory</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            width: 400px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #ccc; /* Add border to the table */
+        }
+        table td {
+            padding: 8px;
+            border: 1px solid #ccc; /* Add border to table cells */
+        }
+        input[type="text"], textarea, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        button {
+            padding: 8px 16px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
 
-<h1>Edit Subcategory</h1>
-
 <div class="form-container">
-    <form action="/update_sub_category/{{ sub_category.sub_category_id }}" method="POST">
-        <label for="subCategoryCategoryId">Category Name:</label>
-        <select name="subCategoryCategoryId" id="subCategoryCategoryId">
-            {% for category in category_vo_lst %}
-                <option value="{{ category.category_id }}"
-                        {% if category.category_id == sub_category.subcategory_category_id %}
-                        selected {% endif %}>
-                    {{ category.category_name }}
-                </option>
-            {% endfor %}
-        </select>
-
-        <label for="subCategoryName">Subcategory Name:</label>
-        <input type="text" name="subCategoryName" id="subCategoryName" value="{{ sub_category.sub_category_name }}" required>
-
-        <label for="subCategoryDescription">Subcategory Description:</label>
-        <textarea name="subCategoryDescription" id="subCategoryDescription" rows="4" required>{{ sub_category.sub_category_description }}</textarea>
-
-        <button type="submit">Update</button>
+    <h1 style="text-align: center;">Edit Subcategory</h1>
+    <form method="post" action="{% url 'admin_update_subcategory' subcategory_vo.subcategory_id %}">
+        {% csrf_token %}
+        <table>
+            <!-- Category Dropdown -->
+            <tr>
+                <td><label for="subCategoryCategoryId">Category:</label></td>
+                <td>
+                    <select name="subCategoryCategoryId" id="subCategoryCategoryId" required>
+                        {% for category in category_vo_lst %}
+                            <option value="{{ category.category_id }}"
+                                    {% if category.category_id == subcategory_vo.subcategory_category_vo.category_id %}selected{% endif %}>
+                                {{ category.category_name }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </td>
+            </tr>
+            <!-- Subcategory Name -->
+            <tr>
+                <td><label for="subCategoryName">Subcategory Name:</label></td>
+                <td>
+                    <input type="text" name="subCategoryName" id="subCategoryName"
+                           value="{{ subcategory_vo.subcategory_name }}" required>
+                </td>
+            </tr>
+            <!-- Subcategory Description -->
+            <tr>
+                <td><label for="subCategoryDescription">Subcategory Description:</label></td>
+                <td>
+                    <textarea name="subCategoryDescription" id="subCategoryDescription" rows="4" required>
+                        {{ subcategory_vo.subcategory_description }}
+                    </textarea>
+                </td>
+            </tr>
+        </table>
+        <!-- Buttons -->
+        <div class="button-container">
+            <button type="submit">Update</button>
+            <button type="button" onclick="window.location.href='{% url 'admin_view_subcategory' %}'">Cancel</button>
+        </div>
     </form>
 </div>
 

@@ -7,10 +7,12 @@ class SubCategoryVO(models.Model):
     subcategory_id = models.AutoField(primary_key=True)
 
     # Set a default value (assuming category_id=1 is valid)
-    subcategory_category_id = models.ForeignKey(CategoryVO, on_delete=models.CASCADE,
-        db_column="subcategory_category_id",
-        default=1
+    subcategory_category_vo = models.ForeignKey(
+        to='category.CategoryVO',  # Ensure this matches the actual app/model
+        on_delete=models.CASCADE,
+        db_column='subcategory_category_vo'
     )
+
     subcategory_name = models.CharField(max_length=100)
     subcategory_description = models.TextField(blank=True,
                                                default='No description provided')
@@ -27,9 +29,9 @@ class SubCategoryVO(models.Model):
             "subcategory_name": self.subcategory_name,
             "subcategory_description": self.subcategory_description,
             "is_deleted": self.is_deleted,
-            "created_at": self.created_at.isoformat(),
+            "created_at": self.create_at.isoformat(),
             "modify_at": self.modify_at.isoformat(),
-            "subcategory_category_id": self.subcategory_category_id,
+            "subcategory_category_vo": self.subcategory_category_vo,
         }
 
     class Meta:

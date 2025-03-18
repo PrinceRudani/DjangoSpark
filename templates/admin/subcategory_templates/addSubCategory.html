@@ -24,7 +24,7 @@
             <td>
                 <select id="subCategoryCategoryName" name="subCategoryCategoryName" required>
                     <option value="" disabled selected>Select a Category</option>
-                    {% for category in sub_category_vo %}
+                    {% for category in subcategory_vo %}
                         <option value="{{ category.category_id }}">{{ category.category_name }}</option>
                     {% endfor %}
                 </select>

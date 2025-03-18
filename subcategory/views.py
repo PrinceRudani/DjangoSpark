@@ -1,63 +1,108 @@
-# subcategory/views.py
 from django.shortcuts import render, redirect
 
-from category.models import CategoryVO  # Import the CategoryVO model
+from category.models import CategoryVO
+from login.views import login_required
 from subcategory.models import SubCategoryVO
+from utils.custome_exception import AppServices
+from utils.my_logger import get_logger
+
+logger = get_logger()
 
 
+@login_required
 def admin_load_subcategory(request):
-    sub_category_vo = CategoryVO.objects.filter(is_deleted=False).all()
-    return render(request, 'admin/subcategory_templates/addSubCategory.html',
-                  {'sub_category_vo': sub_category_vo, })
+    try:
+        logger.debug("Loading subcategory form")
+        subcategory_vo = CategoryVO.objects.filter(is_deleted=False).all()
+        return render(request,
+                      'admin/subcategory_templates/addSubCategory.html',
+                      {'subcategory_vo': subcategory_vo})
+    except Exception as e:
+        logger.error("Error in admin_load_subcategory: %s", str(e))
+        return AppServices.handle_exception(exception=e, is_raise=True)
 
 
+@login_required
 def admin_insert_subcategory(request):
-    subcategory_vo = SubCategoryVO()
-    subcategory_vo.subcategory_name = request.POST.get("subCategoryName")
-    subcategory_vo.subcategory_description = request.POST.get(
-        "subCategoryDescription")
-    subcategory_category_id = request.POST.get("subCategoryCategoryName")
-    category_vo = CategoryVO.objects.get(
-        category_id=subcategory_category_id)
-    subcategory_vo.subcategory_category_id = category_vo
-    subcategory_vo.save()
-    return redirect('admin_view_subcategory')
+    try:
+        subcategory_vo = SubCategoryVO()
+        subcategory_vo.subcategory_name = request.POST.get("subCategoryName")
+        subcategory_vo.subcategory_description = request.POST.get(
+            "subCategoryDescription")
+        subcategory_category_vo = request.POST.get("subCategoryCategoryName")
+        category_vo = CategoryVO.objects.get(
+            category_id=subcategory_category_vo)
+        subcategory_vo.subcategory_category_vo = category_vo
+        subcategory_vo.save()
+        logger.info("Added subcategory '%s'", subcategory_vo.subcategory_name)
+        return redirect('admin_view_subcategory')
+    except Exception as e:
+        logger.error("Error in admin_insert_subcategory: %s", str(e))
+        return AppServices.handle_exception(exception=e, is_raise=True)
 
 
+@login_required
 def admin_view_subcategory(request):
-    sub_category_vo = SubCategoryVO.objects.filter(is_deleted=False).all()
-    return render(request, 'admin/subcategory_templates/viewSubCategory.html',
-                  {'sub_category_vo': sub_category_vo})
+    try:
+        logger.debug("Fetching all subcategories")
+        subcategory_vo = SubCategoryVO.objects.filter(is_deleted=False).all()
+        return render(request,
+                      'admin/subcategory_templates/viewSubCategory.html',
+                      {'subcategory_vo': subcategory_vo})
+    except Exception as e:
+        logger.error("Error in admin_view_subcategory: %s", str(e))
+        return AppServices.handle_exception(exception=e, is_raise=True)
 
 
+@login_required
 def admin_delete_subcategory(request):
-    subcategory_id = request.POST.get("subcategory_id")
-    sub_category_vo = SubCategoryVO.objects.get(subcategory_id=subcategory_id)
-    sub_category_vo.is_deleted = True
-    sub_category_vo.save()
-    return redirect('admin_view_subcategory')
+    try:
+        subcategory_id = request.POST.get("subcategory_id")
+        subcategory_vo = SubCategoryVO.objects.get(
+            subcategory_id=subcategory_id)
+        subcategory_vo.is_deleted = True
+        subcategory_vo.save()
+        logger.info("Deleted subcategory '%s'",
+                    subcategory_vo.subcategory_name)
+        return redirect('admin_view_subcategory')
+    except Exception as e:
+        logger.error("Error in admin_delete_subcategory: %s", str(e))
+        return AppServices.handle_exception(exception=e, is_raise=True)
 
 
+@login_required
 def admin_edit_subcategory(request):
-    subcategory_id = request.POST.get("subcategory_id")
+    try:
+        subcategory_id = request.GET.get("subcategory_id")
+        subcategory_vo = SubCategoryVO.objects.filter(
+            subcategory_id=subcategory_id).first()
+        category_vo_lst = CategoryVO.objects.filter(is_deleted=False)
+        logger.debug("Editing subcategory '%s'",
+                     subcategory_vo.subcategory_name)
+        return render(request,
+                      'admin/subcategory_templates/updateSubCategory.html', {
+                          'subcategory_vo': subcategory_vo,
+                          'category_vo_lst': category_vo_lst
+                      })
+    except Exception as e:
+        logger.error("Error in admin_edit_subcategory: %s", str(e))
+        return AppServices.handle_exception(exception=e, is_raise=True)
 
-    # Get the SubCategoryVO object
-    sub_category_vo = SubCategoryVO.objects.get(subcategory_id=subcategory_id)
-    # Get the list of CategoryVO objects where 'is_deleted' is False
-    category_vo_lst = CategoryVO.objects.filter(is_deleted=False)
 
-    # Render the page with the context
-    return render(request, 'admin/subcategory_templates/updateSubCategory.html',
-                  {
-                      'sub_category_vo': sub_category_vo,
-                      'category_vo_lst': category_vo_lst
-                  })
-
-def admin_update_subcategory(request):
-    subcategory_id = request.POST.get("subcategory_id")
-    sub_category_vo = SubCategoryVO.objects.get(subcategory_id=subcategory_id)
-    sub_category_vo.subcategory_name = request.POST.get("subCategoryName")
-    sub_category_vo.subcategory_description = request.POST.get(
-        "subCategoryDescription"
-
-    )
+@login_required
+def admin_update_subcategory(request, subcategory_id):
+    try:
+        subcategory_vo = SubCategoryVO.objects.filter(
+            subcategory_id=subcategory_id).first()
+        subcategory_vo.subcategory_category_vo = CategoryVO.objects.get(
+            category_id=request.POST['subCategoryCategoryId'])
+        subcategory_vo.subcategory_name = request.POST['subCategoryName']
+        subcategory_vo.subcategory_description = request.POST[
+            'subCategoryDescription']
+        subcategory_vo.save()
+        logger.info("Updated subcategory '%s'",
+                    subcategory_vo.subcategory_name)
+        return redirect('admin_view_subcategory')
+    except Exception as e:
+        logger.error("Error in admin_update_subcategory: %s", str(e))
+        return AppServices.handle_exception(exception=e, is_raise=True)

@@ -30,6 +30,6 @@ urlpatterns = [
          name='admin_delete_category'),
     path('admin_edit_category/', views.admin_edit_category,
          name='admin_edit_category'),
-    path('admin_update_category/', views.admin_update_category,
-         name='admin_update_category'),
+    path('catjson/', views.catgory_details,
+         name='catgory_details'),
 ]

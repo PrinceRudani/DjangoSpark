@@ -16,7 +16,7 @@
 {% endif %}
 
 <center>
-    <form action="{% url 'admin_update_category' %}" method="POST">
+    <form action    ="{% url 'admin_update_category' %}" method="POST">
         {% csrf_token %}
         <input type="hidden" name="category_id" value="{{ category.category_id }}">
 

@@ -3,7 +3,7 @@ from logging.handlers import RotatingFileHandler
 
 
 def get_logger():
-    logger = logging.getLogger("FlaskMVCProject")  # create logger instance
+    logger = logging.getLogger("DjangoCRUD")  # create logger instance
 
     if logger.hasHandlers():  # check if any handlers exists
         logger.handlers.clear()  # if exists clear it

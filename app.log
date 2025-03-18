@@ -32,3 +32,225 @@
 
 2025-03-09 18:25:16,631 - views.py - FlaskMVCProject -  admin_insert_category - INFO - Added category 'princess'
 
+2025-03-10 07:21:02,727 - views.py - FlaskMVCProject -  admin_insert_category - INFO - Added category 'prinec'
+
+2025-03-10 07:48:46,699 - views.py - FlaskMVCProject -  admin_insert_category - INFO - Added category 'prince'
+
+2025-03-10 07:51:05,844 - views.py - FlaskMVCProject -  admin_insert_category - INFO - Added category 'wefcew'
+
+2025-03-10 11:43:33,600 - views.py - FlaskMVCProject -  admin_insert_category - INFO - Added category 'dfv'
+
+2025-03-10 16:46:52,916 - views.py - FlaskMVCProject -  admin_insert_category - INFO - Added category 'fdvfd'
+
+2025-03-17 06:39:08,776 - views.py - FlaskMVCProject -  home - INFO - 
+
+2025-03-17 06:40:50,682 - views.py - FlaskMVCProject -  home - INFO - 
+
+2025-03-17 06:42:46,154 - views.py - FlaskMVCProject -  home - INFO - 
+
+2025-03-17 06:43:03,724 - views.py - FlaskMVCProject -  home - INFO - 
+
+2025-03-17 06:43:10,837 - views.py - FlaskMVCProject -  home - INFO - 
+
+2025-03-17 06:45:50,928 - views.py - FlaskMVCProject -  home - INFO - 
+
+2025-03-17 06:45:52,764 - views.py - FlaskMVCProject -  home - INFO - 
+
+2025-03-17 06:46:01,277 - views.py - FlaskMVCProject -  home - INFO - 
+
+2025-03-17 06:46:36,625 - views.py - FlaskMVCProject -  home - INFO - 
+
+2025-03-17 08:02:04,569 - views.py - FlaskMVCProject -  home - INFO - 
+
+2025-03-17 08:02:09,142 - views.py - FlaskMVCProject -  home - INFO - 
+
+2025-03-17 08:02:14,931 - views.py - FlaskMVCProject -  home - INFO - 
+
+2025-03-17 08:09:06,383 - views.py - FlaskMVCProject -  home - INFO - 
+
+2025-03-17 08:09:06,475 - views.py - FlaskMVCProject -  home - INFO - 
+
+2025-03-17 08:09:06,678 - views.py - FlaskMVCProject -  home - INFO - 
+
+2025-03-17 08:09:06,867 - views.py - FlaskMVCProject -  home - INFO - 
+
+2025-03-17 08:09:11,658 - views.py - FlaskMVCProject -  home - INFO - 
+
+2025-03-17 08:13:11,854 - views.py - FlaskMVCProject -  home - INFO - 
+
+2025-03-17 08:13:17,956 - views.py - FlaskMVCProject -  home - INFO - 
+
+2025-03-17 10:25:13,446 - views.py - FlaskMVCProject -  home - INFO - 
+
+2025-03-17 10:25:44,145 - views.py - FlaskMVCProject -  home - INFO - 
+
+2025-03-17 11:46:59,839 - views.py - FlaskMVCProject -  generate_token - ERROR - Error generating tokens: 'Settings' object has no attribute 'JWT_SECRET_KEY'
+
+2025-03-17 11:47:00,839 - views.py - FlaskMVCProject -  generate_token - ERROR - Error generating tokens: 'Settings' object has no attribute 'JWT_SECRET_KEY'
+
+2025-03-17 12:00:52,231 - views.py - FlaskMVCProject -  generate_token - ERROR - Error generating tokens: 'Settings' object has no attribute 'JWT_SECRET_KEY'
+
+2025-03-17 12:00:55,590 - views.py - FlaskMVCProject -  generate_token - ERROR - Error generating tokens: 'Settings' object has no attribute 'JWT_SECRET_KEY'
+
+2025-03-17 12:01:22,501 - views.py - FlaskMVCProject -  admin_insert_category - INFO - Added category 'wevf'
+
+2025-03-17 12:03:07,168 - views.py - FlaskMVCProject -  generate_token - ERROR - Error generating tokens: 'Settings' object has no attribute 'JWT_SECRET_KEY'
+
+2025-03-17 12:03:21,484 - views.py - FlaskMVCProject -  generate_token - ERROR - Error generating tokens: 'Settings' object has no attribute 'JWT_SECRET_KEY'
+
+2025-03-17 12:04:14,671 - views.py - FlaskMVCProject -  generate_token - ERROR - Error generating tokens: 'Settings' object has no attribute 'JWT_SECRET_KEY'
+
+2025-03-17 19:32:57,685 - views.py - FlaskMVCProject -  admin_insert_category - INFO - Added category 'Electronics'
+
+2025-03-17 19:34:23,562 - views.py - FlaskMVCProject -  admin_insert_category - INFO - Added category 'Home Appliances'
+
+2025-03-17 19:34:51,301 - views.py - FlaskMVCProject -  admin_insert_category - INFO - Added category 'Fashion & Accessories'
+
+2025-03-17 20:15:26,900 - views.py - FlaskMVCProject -  admin_load_subcategory - DEBUG - Loading subcategory form
+
+2025-03-17 20:15:40,283 - views.py - FlaskMVCProject -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-17 20:15:52,421 - views.py - FlaskMVCProject -  admin_view_subcategory - DEBUG - Fetching all subcategories
+
+2025-03-17 20:17:51,838 - views.py - FlaskMVCProject -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-17 20:17:54,060 - views.py - FlaskMVCProject -  admin_view_product - INFO - Fetching all products
+
+2025-03-17 20:22:46,892 - views.py - FlaskMVCProject -  admin_load_category - DEBUG - Loading category form
+
+2025-03-17 20:22:49,447 - views.py - FlaskMVCProject -  admin_insert_category - INFO - Added category 'dc'
+
+2025-03-17 20:22:49,455 - views.py - FlaskMVCProject -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-17 20:23:15,609 - views.py - FlaskMVCProject -  admin_edit_category - DEBUG - Editing category 'dc'
+
+2025-03-17 20:23:17,313 - signals.py - FlaskMVCProject -  category_saved - INFO - Signal Triggered: {'signal': 'post_save', 'sender': 'CategoryVO', 'category_id': 5, 'category_name': 'dc', 'category_description': 'dcf', 'is_deleted': False, 'timestamp': '2025-03-17T20:23:17.312975+00:00', 'action': 'Updated'}
+
+2025-03-17 20:23:17,313 - views.py - FlaskMVCProject -  admin_update_category - INFO - Updated category 'dc'
+
+2025-03-17 20:23:17,321 - views.py - FlaskMVCProject -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-17 20:23:23,924 - views.py - FlaskMVCProject -  admin_load_category - DEBUG - Loading category form
+
+2025-03-17 20:23:27,006 - signals.py - FlaskMVCProject -  category_saved - INFO - Signal Triggered: {'signal': 'post_save', 'sender': 'CategoryVO', 'category_id': 6, 'category_name': 'wsdc', 'category_description': 'wdsc', 'is_deleted': False, 'timestamp': '2025-03-17T20:23:27.006611+00:00', 'action': 'Created'}
+
+2025-03-17 20:23:27,006 - views.py - FlaskMVCProject -  admin_insert_category - INFO - Added category 'wsdc'
+
+2025-03-17 20:23:27,013 - views.py - FlaskMVCProject -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-17 20:23:49,857 - views.py - FlaskMVCProject -  admin_load_category - DEBUG - Loading category form
+
+2025-03-17 20:23:53,115 - signals.py - FlaskMVCProject -  category_saved - INFO - Signal Triggered: {'signal': 'post_save', 'sender': 'CategoryVO', 'category_id': 7, 'category_name': 'fdjn', 'category_description': 'cfej', 'is_deleted': False, 'timestamp': '2025-03-17T20:23:53.115859+00:00', 'action': 'Created'}
+
+2025-03-17 20:23:53,116 - views.py - FlaskMVCProject -  admin_insert_category - INFO - Added category 'fdjn'
+
+2025-03-17 20:23:53,124 - views.py - FlaskMVCProject -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-17 20:24:01,054 - signals.py - FlaskMVCProject -  category_soft_deleted - INFO - Signal Triggered: {'signal': 'soft_delete', 'sender': 'CategoryVO', 'category_id': 5, 'category_name': 'dc', 'category_description': 'dcf', 'is_deleted': True, 'timestamp': '2025-03-17T20:24:01.054916+00:00', 'action': 'Soft Deleted'}
+
+2025-03-17 20:24:01,062 - views.py - FlaskMVCProject -  admin_delete_category - INFO - Deleted category 'dc'
+
+2025-03-17 20:24:01,076 - views.py - FlaskMVCProject -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-17 20:24:02,115 - signals.py - FlaskMVCProject -  category_soft_deleted - INFO - Signal Triggered: {'signal': 'soft_delete', 'sender': 'CategoryVO', 'category_id': 6, 'category_name': 'wsdc', 'category_description': 'wdsc', 'is_deleted': True, 'timestamp': '2025-03-17T20:24:02.114981+00:00', 'action': 'Soft Deleted'}
+
+2025-03-17 20:24:02,121 - views.py - FlaskMVCProject -  admin_delete_category - INFO - Deleted category 'wsdc'
+
+2025-03-17 20:24:02,127 - views.py - FlaskMVCProject -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-17 20:24:02,965 - signals.py - FlaskMVCProject -  category_soft_deleted - INFO - Signal Triggered: {'signal': 'soft_delete', 'sender': 'CategoryVO', 'category_id': 7, 'category_name': 'fdjn', 'category_description': 'cfej', 'is_deleted': True, 'timestamp': '2025-03-17T20:24:02.965450+00:00', 'action': 'Soft Deleted'}
+
+2025-03-17 20:24:02,971 - views.py - FlaskMVCProject -  admin_delete_category - INFO - Deleted category 'fdjn'
+
+2025-03-17 20:24:02,978 - views.py - FlaskMVCProject -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 04:08:29,129 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 04:08:50,301 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 04:08:52,846 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 04:08:54,853 - views.py - DjangoCRUD -  admin_view_subcategory - DEBUG - Fetching all subcategories
+
+2025-03-18 04:08:56,601 - views.py - DjangoCRUD -  admin_view_product - INFO - Fetching all products
+
+2025-03-18 04:46:28,072 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 04:46:55,049 - views.py - DjangoCRUD -  admin_view_subcategory - DEBUG - Fetching all subcategories
+
+2025-03-18 04:46:57,377 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 04:46:59,013 - views.py - DjangoCRUD -  admin_view_product - INFO - Fetching all products
+
+2025-03-18 04:47:01,941 - views.py - DjangoCRUD -  admin_load_category - DEBUG - Loading category form
+
+2025-03-18 05:06:35,720 - views.py - DjangoCRUD -  admin_load_category - DEBUG - Loading category form
+
+2025-03-18 05:06:40,227 - signals.py - DjangoCRUD -  category_saved - INFO - Signal Triggered: {'signal': 'post_save', 'sender': 'CategoryVO', 'category_id': 8, 'category_name': 'def', 'category_description': 'adwfs', 'is_deleted': False, 'timestamp': '2025-03-18T05:06:40.227057+00:00', 'action': 'Created'}
+
+2025-03-18 05:06:40,227 - views.py - DjangoCRUD -  admin_insert_category - INFO - Added category 'def'
+
+2025-03-18 05:06:40,230 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 05:31:39,456 - views.py - DjangoCRUD -  admin_load_category - DEBUG - Loading category form
+
+2025-03-18 05:31:42,374 - signals.py - DjangoCRUD -  category_saved - INFO - Signal Triggered: {'signal': 'post_save', 'sender': 'CategoryVO', 'category_id': 9, 'category_name': '', 'category_description': 'wsdcfv', 'is_deleted': False, 'timestamp': '2025-03-18T05:31:42.373929+00:00', 'action': 'Created'}
+
+2025-03-18 05:31:42,374 - views.py - DjangoCRUD -  admin_insert_category - INFO - Added category ''
+
+2025-03-18 05:31:42,380 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 05:31:48,482 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 05:31:50,139 - views.py - DjangoCRUD -  admin_edit_category - DEBUG - Editing category ''
+
+2025-03-18 05:31:53,472 - signals.py - DjangoCRUD -  category_saved - INFO - Signal Triggered: {'signal': 'post_save', 'sender': 'CategoryVO', 'category_id': 9, 'category_name': 'dec', 'category_description': 'wsdcfv', 'is_deleted': False, 'timestamp': '2025-03-18T05:31:53.472030+00:00', 'action': 'Updated'}
+
+2025-03-18 05:31:53,472 - views.py - DjangoCRUD -  admin_update_category - INFO - Updated category 'dec'
+
+2025-03-18 05:31:53,477 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 05:32:44,123 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 05:32:44,123 - views.py - DjangoCRUD -  admin_view_category - ERROR - Error in admin_view_category: name 'category_dto_lst' is not defined
+
+2025-03-18 05:33:02,729 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 05:33:02,730 - views.py - DjangoCRUD -  admin_view_category - ERROR - Error in admin_view_category: name 'category_dto_lst' is not defined
+
+2025-03-18 05:33:22,300 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 05:33:22,300 - views.py - DjangoCRUD -  admin_view_category - ERROR - Error in admin_view_category: name 'category_dto_lst' is not defined
+
+2025-03-18 05:33:23,438 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 05:33:23,644 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 05:33:23,777 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 05:33:27,386 - signals.py - DjangoCRUD -  category_soft_deleted - INFO - Signal Triggered: {'signal': 'soft_delete', 'sender': 'CategoryVO', 'category_id': 8, 'category_name': 'def', 'category_description': 'adwfs', 'is_deleted': True, 'timestamp': '2025-03-18T05:33:27.386006+00:00', 'action': 'Soft Deleted'}
+
+2025-03-18 05:33:27,388 - views.py - DjangoCRUD -  admin_delete_category - INFO - Deleted category 'def'
+
+2025-03-18 05:33:27,392 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 05:33:29,452 - signals.py - DjangoCRUD -  category_soft_deleted - INFO - Signal Triggered: {'signal': 'soft_delete', 'sender': 'CategoryVO', 'category_id': 9, 'category_name': 'dec', 'category_description': 'wsdcfv', 'is_deleted': True, 'timestamp': '2025-03-18T05:33:29.452792+00:00', 'action': 'Soft Deleted'}
+
+2025-03-18 05:33:29,455 - views.py - DjangoCRUD -  admin_delete_category - INFO - Deleted category 'dec'
+
+2025-03-18 05:33:29,459 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 06:49:19,446 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 06:49:20,844 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 06:49:36,543 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 06:49:55,280 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 06:49:56,719 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 06:50:06,002 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+
+2025-03-18 06:50:38,828 - views.py - DjangoCRUD -  admin_view_category - DEBUG - Fetching all categories
+

@@ -17,8 +17,11 @@ Including another URLconf
 # base/urls.py
 from django.urls import path
 
-from .views import home
+
+from . import views
 
 urlpatterns = [
-    path('', home, name='home'),  # Home page URL
+    path('home/', views.home, name='home'),
+    path('load_home_page/', views.load_home_page, name='home'),
+    path('logout/', views.logout_view, name='logout'),
 ]
